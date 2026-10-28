@@ -1,0 +1,23 @@
+[project]
+name = "mediakit"
+version = "0.1.0"
+description = "Python library dedicated to collecting, managing and packaging various forms of media."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ffmpeg-python>=0.2.0",
+    "guessit>=4.4.0",
+    "httpx>=0.28.1",
+    "mutagen>=1.48.1",
+    "pydantic>=2.14.1",
+    "qbittorrent-api>=2026.10.1",
+    "requests>=2.34.2",
+    "yt-dlp>=2026.10.26",
+]
+
+[project.scripts]
+mediakit = "mediakit:main"
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
