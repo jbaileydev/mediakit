@@ -234,7 +234,7 @@ class YouTubeSource:
                 "Download complete",
             )
 
-        except Exception as ex:
+        except Exception as ex:  # noqa: BLE001 - Don't catch blind exception
             job.status = JobStatus.FAILED
             job.speed_bps = None
             job.eta_s = None
@@ -281,6 +281,6 @@ class YouTubeSource:
             ydl_options["nooverwrites"] = False
         else:
             ydl_options["overwrites"] = False
-            # ydl_options["download_archive"] = archive_file  # TODO: Implement me
+            # ydl_options["download_archive"] = archive_file  # TODO: Implement me when database is implemented
 
         return ydl_options

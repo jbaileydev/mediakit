@@ -40,9 +40,9 @@ class VideoQuality(StrEnum):
     WORST = "worst"
 
 
-class JobStatus(StrEnum):
-    QUEUED = "queued"
-    RUNNING = "running"
-    COMPLETED = "completed"
-    FAILED = "failed"
-    CANCELLED = "cancelled"
+class OperatingSystem(StrEnum):
+    WINDOWS = "windows"
+    WSL = "wsl"
+    LINUX = "linux"
+    MACOS = "macos"
+    UNKNOWN = "unknown"
